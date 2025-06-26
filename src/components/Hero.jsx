@@ -16,7 +16,7 @@ const Hero = () => {
             <img
               src={logo}
               alt="Logo"
-              className="w-24 md:absolute md:top-[24.5%] md:left-[35%] md:w-32 lg:w-40 object-contain drop-shadow-lg z-20"
+              className="w-24 md:absolute md:top-[29.5%] md:left-[35%] md:w-32 lg:w-40 object-contain drop-shadow-lg z-20"
             />
             <p className="text-2xl">Exceptional Senior Care</p>
             <h1 className="text-5xl md:text-7xl font-bold">Always with Compassion</h1>
