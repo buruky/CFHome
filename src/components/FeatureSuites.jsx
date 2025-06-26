@@ -3,7 +3,7 @@ import room1 from '../assets/rooms/room.jpg';
 import room2 from '../assets/rooms/room(1).jpg';
 // import room3 from '../assets/rooms/room(2).jpg';
 import room4 from '../assets/rooms/room(3).jpg';
-import room5 from '../assets/rooms/room(4).jpg';
+
 import room6 from '../assets/rooms/room(5).jpg';
 import room7 from '../assets/rooms/room(6).jpg';
 import room8 from '../assets/rooms/room(7).jpg';
