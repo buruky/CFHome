@@ -33,7 +33,7 @@ const Features = () => (
       <div className="max-w-[1240px] mx-auto text-center">
         <h2 className="text-5xl font-bold text-gray-800 mb-4">Why Choose Us</h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          Our family home, situated in a calm nieghborhood a few minutes from the Puget Sound and Narrow Bridge, offers thoughtfully curated spaces, compassionate staff, and premium amenities designed to help our residents thrive. 
+          Our family home, situated in a calm neighborhood a few minutes from the Puget Sound and Narrow Bridge, offers thoughtfully curated spaces, compassionate staff, and premium amenities designed to help our residents thrive. 
         </p>
       </div>
     </div>
