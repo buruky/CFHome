@@ -13,8 +13,17 @@ const Hero = () => {
       <img
         src={logo}
         alt="Logo"
-        className="absolute top-[42.5%] left-[40%] w-32 md:w-40 object-contain drop-shadow-lg"
-        />
+        className="
+          absolute 
+          w-24 md:w-32 lg:w-40 
+          left-1/2 top-1/2 
+          -translate-x-1/2 -translate-y-1/2 
+          object-contain 
+          drop-shadow-lg
+          z-20
+      "
+      />
+
 
 
       <div className="w-full h-full bg-black/50 flex items-center">
