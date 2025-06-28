@@ -11,7 +11,7 @@ const VisitUs = () => (
       <div className='text-lg space-y-2'>
         <p><span className='font-bold text-white'>Phone:</span> (253) 301-1187</p>
         <p><span className='font-bold text-white'>Email:</span> alwayswithcompassion@yahoo.com</p>
-        <p><span className='font-bold text-white'>Location:</span> Tacoma, WA Near University Place</p>
+        <p><span className='font-bold text-white'>Location:</span> 729 N Locust Ln, Tacoma WA 98406</p>
       </div>
     </div>
   </div>
