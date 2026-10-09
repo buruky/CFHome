@@ -1,26 +1,33 @@
-import React from 'react';
 import food from '../assets/food.jpg';
+import Reveal from './Reveal';
 
 const FeatureCulinary = () => {
   return (
-    <section className="bg-white py-20 px-4">
-      <div className="max-w-[1240px] mx-auto text-gray-800">
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4">Tailored Culinary Experience</h3>
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+    <section className="bg-sand-50 py-20 sm:py-28 px-4">
+      <div className="max-w-content mx-auto">
+        <Reveal as="div" className="text-center mb-12" duration={800}>
+          <h3 className="font-display text-3xl sm:text-4xl font-semibold mb-4 text-navy-900">
+            Tailored Culinary Experience
+          </h3>
+          <p className="text-lg text-navy-700/80 leading-relaxed max-w-3xl mx-auto">
             Every meal is prepared fresh daily with personalized menus that balance nutrition and flavor. Our residents enjoy delicious, home-style cooking tailored to their tastes and dietary needs.
           </p>
-        </div>
-        <div className="relative max-w-4xl mx-auto">
+        </Reveal>
+
+        <Reveal variant="scale" duration={900} className="relative max-w-4xl mx-auto block">
           <img
             src={food}
             alt="Plated meal"
-            className="w-full h-96 object-cover rounded-xl shadow-lg"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-80 sm:h-[26rem] object-cover rounded-2xl shadow-lifted"
           />
-          <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white p-6 rounded-b-xl">
-            <p className="text-lg font-medium">Meals crafted with love, served with care.</p>
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent text-sand-50 p-6 sm:p-8 rounded-b-2xl">
+            <p className="font-display italic text-lg sm:text-xl">
+              Meals crafted with love, served with care.
+            </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

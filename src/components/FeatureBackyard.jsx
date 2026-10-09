@@ -1,50 +1,61 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import img1 from '../assets/backyard/backyard(1).jpg';
 import img2 from '../assets/backyard/backyard(2).jpg';
 import img3 from '../assets/backyard/backyard(3).jpg';
+import Lightbox from './Lightbox';
+import Reveal from './Reveal';
 
 const images = [img1, img2, img3];
+const lightboxImages = images.map((src, i) => ({ src, alt: `Backyard view ${i + 1}` }));
 
 const FeatureBackyard = () => {
-  const [fullscreen, setFullscreen] = useState(null);
+  const [index, setIndex] = useState(null);
 
-  const openFullscreen = (index) => setFullscreen(index);
-  const closeFullscreen = () => setFullscreen(null);
+  const prev = () => setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
+  const next = () => setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
 
   return (
-    <section className="relative bg-gradient-to-br from-indigo-50 to-white py-20 px-4">
-      <div className="max-w-[1240px] mx-auto text-gray-900">
-        <h3 className="text-4xl font-bold mb-6 text-center">Beautiful Backyard & Patio</h3>
-        <p className="text-lg leading-relaxed max-w-3xl mx-auto text-center mb-12">
-          Step outside into serene greenery with a wide patio ideal for reflection, connection, and peaceful outdoor time. Our backyard is a favorite retreat for both residents and visiting family.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Backyard view ${index + 1}`}
-              className="w-full h-64 object-cover rounded-lg shadow cursor-pointer hover:scale-105 transition-transform duration-300"
-              onClick={() => openFullscreen(index)}
-            />
+    <section className="relative bg-gradient-to-b from-sage-700 to-navy-900 py-20 sm:py-28 px-4">
+      <div className="max-w-content mx-auto">
+        <Reveal as="div" className="text-center mb-12" duration={800}>
+          <h3 className="font-display text-3xl sm:text-4xl font-semibold text-sand-50 mb-4">
+            Beautiful Backyard &amp; Patio
+          </h3>
+          <p className="text-lg text-sand-100/80 leading-relaxed max-w-3xl mx-auto">
+            Step outside into serene greenery with a wide patio ideal for reflection, connection, and peaceful outdoor time. Our backyard is a favorite retreat for both residents and visiting family.
+          </p>
+        </Reveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+          {images.map((img, i) => (
+            <Reveal key={img} variant="up" delay={i * 90} duration={700}>
+              <button
+                onClick={() => setIndex(i)}
+                className="group relative block w-full h-64 sm:h-72 rounded-xl overflow-hidden shadow-lifted select-none"
+                aria-label={`View backyard photo ${i + 1} full screen`}
+              >
+                <img
+                  src={img}
+                  alt={`Backyard view ${i + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out-expo group-hover:scale-110 group-active:scale-105"
+                />
+                <div className="absolute inset-0 bg-navy-950/0 group-hover:bg-navy-950/15 transition-colors duration-300" />
+              </button>
+            </Reveal>
           ))}
         </div>
       </div>
 
-      {fullscreen !== null && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center">
-          <button
-            onClick={closeFullscreen}
-            className="absolute top-6 right-6 text-white text-3xl font-bold z-50"
-          >
-            &times;
-          </button>
-          <img
-            src={images[fullscreen]}
-            alt={`Fullscreen view ${fullscreen + 1}`}
-            className="max-w-6xl max-h-[90vh] rounded-xl shadow-xl transition-opacity duration-500"
-          />
-        </div>
+      {index !== null && (
+        <Lightbox
+          images={lightboxImages}
+          index={index}
+          onClose={() => setIndex(null)}
+          onPrev={prev}
+          onNext={next}
+        />
       )}
     </section>
   );
