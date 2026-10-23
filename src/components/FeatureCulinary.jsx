@@ -1,4 +1,4 @@
-import food from '../assets/food.jpg';
+import food from '../assets/food.webp';
 import Reveal from './Reveal';
 
 const FeatureCulinary = () => {

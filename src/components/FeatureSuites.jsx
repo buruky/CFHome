@@ -1,9 +1,9 @@
-import room1 from '../assets/rooms/room.jpg';
-import room2 from '../assets/rooms/room(1).jpg';
-import room4 from '../assets/rooms/room(3).jpg';
-import room6 from '../assets/rooms/room(5).jpg';
-import room7 from '../assets/rooms/room(6).jpg';
-import room8 from '../assets/rooms/room(7).jpg';
+import room1 from '../assets/rooms/room.webp';
+import room2 from '../assets/rooms/room(1).webp';
+import room4 from '../assets/rooms/room(3).webp';
+import room6 from '../assets/rooms/room(5).webp';
+import room7 from '../assets/rooms/room(6).webp';
+import room8 from '../assets/rooms/room(7).webp';
 import Carousel from './Carousel';
 import Reveal from './Reveal';
 

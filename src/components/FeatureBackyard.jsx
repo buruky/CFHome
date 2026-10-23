@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import img1 from '../assets/backyard/backyard(1).jpg';
-import img2 from '../assets/backyard/backyard(2).jpg';
-import img3 from '../assets/backyard/backyard(3).jpg';
+import img1 from '../assets/backyard/backyard(1).webp';
+import img2 from '../assets/backyard/backyard(2).webp';
+import img3 from '../assets/backyard/backyard(3).webp';
 import Lightbox from './Lightbox';
 import Reveal from './Reveal';
 

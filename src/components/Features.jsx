@@ -4,7 +4,7 @@ import FeatureLivingSpaces from './FeatureLivingSpaces';
 import FeatureBackyard from './FeatureBackyard';
 import FeatureCulinary from './FeatureCulinary';
 import Reveal from './Reveal';
-import house from '../assets/house.jpg';
+import house from '../assets/house.webp';
 
 const Features = () => (
   <div id="features" className="w-full">

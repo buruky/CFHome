@@ -1,9 +1,9 @@
-import img1 from '../assets/livingspaces/livingspace(1).jpg';
-import img2 from '../assets/livingspaces/livingspace(2).jpg';
-import img3 from '../assets/livingspaces/livingspace(3).jpg';
-import img4 from '../assets/livingspaces/livingspace(4).jpg';
-import img5 from '../assets/livingspaces/livingspace(5).jpg';
-import img6 from '../assets/livingspaces/livingspace(6).jpg';
+import img1 from '../assets/livingspaces/livingspace(1).webp';
+import img2 from '../assets/livingspaces/livingspace(2).webp';
+import img3 from '../assets/livingspaces/livingspace(3).webp';
+import img4 from '../assets/livingspaces/livingspace(4).webp';
+import img5 from '../assets/livingspaces/livingspace(5).webp';
+import img6 from '../assets/livingspaces/livingspace(6).webp';
 import Carousel from './Carousel';
 import Reveal from './Reveal';
 
