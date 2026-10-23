@@ -1,4 +1,4 @@
-import bgImg from '../assets/main-backgroun.jpg';
+import bgImg from '../assets/main-background.webp';
 import logo from '../assets/logo-white.png';
 import Reveal from './Reveal';
 import { ChevronDownIcon } from '@heroicons/react/outline';
